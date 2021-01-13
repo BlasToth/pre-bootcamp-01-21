@@ -1,0 +1,17 @@
+#container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    border: 5px solid black;
+}
+#display {
+    background-color: grey;
+    grid-column: 1/5;
+    grid-row: 1/1;
+}
+#seven {
+    grid-column: 1/2;
+    grid-row: 2/2;
+    background-color: rgb(21, 105, 105);
+}
