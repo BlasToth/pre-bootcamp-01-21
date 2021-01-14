@@ -6,6 +6,7 @@
 html {
     display: flex;
     justify-content: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 #container {
     height: 90vh;
@@ -16,14 +17,16 @@ html {
     border: 5px solid black;
 }
 #display {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    text-align: right;
     background-color: rgb(217, 238, 240);
     border: 4px solid blue;
     grid-column: 1/5;
     grid-row: 1/1;
     font-size: 5em;
+}
+.numbers, .operations, #clear, #decimal, #equal {
+    font-size: 2em;
+    font-weight: bold;
 }
 #clear {
     grid-column: 1/4;

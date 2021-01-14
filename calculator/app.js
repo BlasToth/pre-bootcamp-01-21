@@ -1,34 +1,25 @@
 const display = document.querySelector('#display');
-display.textContent = "0";
+display.value = "0";
 const numbers = document.querySelectorAll('.numbers');
+const operations = document.querySelectorAll('.operations');
 const clear = document.querySelector('#clear');
 
+// numbers 
 for (let i = 0; i < numbers.length; i++) {
     numbers[i].addEventListener('click',() => {
-        if (display.textContent === "0"){
-            display.textContent = numbers[i].textContent;
+        if (display.value === "0"){
+            display.value = numbers[i].textContent;
         } else {
-            display.textContent += numbers[i].textContent;
+            display.value += numbers[i].textContent;
         }
     });
 }
+function add() {
+    console.log(display.textContent);
 
+}
 
-// numbers[1].addEventListener('click',() => {
-//     if (display.textContent === "0"){
-//         display.textContent = numbers[1].textContent;
-//     } else {
-//         display.textContent += numbers[1].textContent;
-//     }
-// });
-// numbers[2].addEventListener('click',() => {
-//     if (display.textContent === "0"){
-//         display.textContent = numbers[2].textContent;
-//     } else {
-//         display.textContent += numbers[2].textContent;
-//     }
-// });
 
 clear.addEventListener('click',() => {
-    display.textContent = "0";
+    display.value = "0";
 });
