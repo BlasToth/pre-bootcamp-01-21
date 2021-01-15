@@ -42,11 +42,8 @@ for (let i = 0; i < operations.length; i++) {
     });
 }
 
-function calculate(num1, operator, num2) {
-    // num1 = 10;
-    // num2 = 20;
-    // operator = '×';
-    var result;
+function calculate() {
+    let result;
     if (!operator) alert('NO OPERATOR');
     if (!num1) alert('NO NUM1');
     if (!num2) alert('NO NUM2');
@@ -57,10 +54,9 @@ function calculate(num1, operator, num2) {
     } else if (operator === '-') {
         result = num1 - num2;
     } else if (operator === '+') {
-        result = num1 + num2;
+        result = +num1 + +num2;
     } else alert('Unknown operator!');
-    display.value = result;
-    
+    display.value = result;    
 }
 
 // clear button
@@ -74,7 +70,10 @@ function clearing() {
 }
 
 // equal button
-equal.addEventListener('click', ()=>{
+equal.addEventListener('click', () => {
     calculate();
+    num1 = "";
+    num2 = "";
+    operator = null;
     
 });
