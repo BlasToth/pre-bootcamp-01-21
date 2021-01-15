@@ -9,11 +9,13 @@ const decimal = document.querySelector('#decimal');
 let num1 = "";
 let num2 = "";
 let operator ;
+let equalIsPressed = false;
 
 // numbers 
 for (let i = 0; i < numbers.length; i++) {
     numbers[i].addEventListener('click',() => {
-        if (display.value === "0"){
+        if (display.value === "0" || equalIsPressed === true){
+            equalIsPressed = false;
             display.value = numbers[i].textContent;
         } else if (operator) {
             display.value += numbers[i].textContent;
@@ -75,5 +77,6 @@ equal.addEventListener('click', () => {
     num1 = "";
     num2 = "";
     operator = null;
+    equalIsPressed = true;
     
 });
