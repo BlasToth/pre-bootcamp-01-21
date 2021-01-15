@@ -30,38 +30,51 @@ for (let i = 0; i < numbers.length; i++) {
 }
 
 // operations
-
-    operations[0].addEventListener('click', (e)=> {
+for (let i = 0; i < operations.length; i++) {
+    operations[i].addEventListener('click', (e)=> {
         if (!num1) return;
         else {
-            operator = operations[0].textContent;
+            operator = operations[i].textContent;
             console.log("operator: " + operator);
             display.value = "";
             return operator;
         }
-    })
+    });
+}
 
 function calculate(num1, operator, num2) {
-    if (!operator) alert('FAIL');
+    // num1 = 10;
+    // num2 = 20;
+    // operator = '×';
+    var result;
+    if (!operator) alert('NO OPERATOR');
+    if (!num1) alert('NO NUM1');
+    if (!num2) alert('NO NUM2');
     else if (operator === '÷') {
-        return num1 / num2;
+        result = num1 / num2;
     } else if (operator === '×') {
-        return num1 * num2;
+        result = num1 * num2;
     } else if (operator === '-') {
-        return num1 - num2;
+        result = num1 - num2;
     } else if (operator === '+') {
-        return num1 + num2;
+        result = num1 + num2;
     } else alert('Unknown operator!');
+    display.value = result;
+    
 }
 
 // clear button
-clear.addEventListener('click',() => {
+clear.addEventListener('click', clearing);
+
+function clearing() {
     display.value = "";
     num1 = "";
-});
+    num2 = "";
+    operator = null;
+}
 
 // equal button
 equal.addEventListener('click', ()=>{
-    
     calculate();
+    
 });
