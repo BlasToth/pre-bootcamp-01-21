@@ -80,3 +80,11 @@ equal.addEventListener('click', () => {
     equalIsPressed = true;
     
 });
+
+// decimal button
+decimal.addEventListener('click', ()=> {
+    if (display.value.includes('.')) return;
+    display.value += ".";
+    
+});
+
