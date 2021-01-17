@@ -6,93 +6,115 @@ input::-webkit-inner-spin-button {
 }
 
 /* Firefox */
-input[type=number] {
+input[type="number"] {
   -moz-appearance: textfield;
 }
 
 :root {
-    --main-num-color: rgb(194, 253, 255);
-    --main-mat-color: gold;
-    
-  }
+  --main-num-color: rgb(194, 253, 255);
+  --main-mat-color: gold;
+}
 html {
-    display: flex;
-    justify-content: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #f9ea8f;
+  background-image: linear-gradient(315deg, #f9ea8f 0%, #aff1da 74%);
+  display: flex;
+  justify-content: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  height: 100vh;
+  padding: 1em;
+  outline: hidden;
 }
 #container {
-    height: 90vh;
-    display: grid;
-    width: 400px;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(6, 1fr);
-    border: 5px solid black;
+  grid-gap: 2px;
+  background-color: whitesmoke;
+  height: 90vh;
+  display: grid;
+  width: 400px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  border: 8px solid whitesmoke;
+  border-radius: 5px;
+  box-shadow: 10px 10px 10px 1px rgb(37, 35, 35);
 }
 #display {
-    text-align: right;
-    background-color: rgb(217, 238, 240);
-    border: 4px solid blue;
-    grid-column: 1/5;
-    grid-row: 1/1;
-    font-size: 5em;
+  overflow: hidden;
+  text-align: right;
+  background-color: rgb(217, 238, 240);
+  border: 4px solid rgb(44, 116, 211);
+  grid-column: 1/5;
+  grid-row: 1/1;
+  font-size: 4.2em;
+  border-radius: 5px;
 }
-.numbers, .operations, #clear, #decimal, #equal {
-    font-size: 2em;
-    font-weight: bold;
+button {
+  border-radius: 8px;
+  border-width: 2px;
+  border-color: rgb(49, 46, 46);
+}
+button:focus {
+  outline: 0;
+  border-width: 4px;
+}
+.numbers,
+.operations,
+#clear,
+#decimal,
+#equal {
+  font-size: 2em;
+  font-weight: bold;
 }
 #clear {
-    grid-column: 1/4;
-    grid-row: 2/2;
-    background-color: rgb(255, 96, 34);
+  grid-column: 1/4;
+  grid-row: 2/2;
+  background-color: rgb(255, 96, 34);
 }
 #division {
-    background-color: var(--main-mat-color);
+  background-color: var(--main-mat-color);
 }
 #seven {
-    background-color: var(--main-num-color);
+  background-color: var(--main-num-color);
 }
 #eight {
-    background-color: var(--main-num-color);
+  background-color: var(--main-num-color);
 }
 #nine {
-    background-color: var(--main-num-color);
+  background-color: var(--main-num-color);
 }
 #multiply {
-    background-color: var(--main-mat-color);
+  background-color: var(--main-mat-color);
 }
 #four {
-    background-color: var(--main-num-color);
+  background-color: var(--main-num-color);
 }
 #five {
-    background-color: var(--main-num-color);
+  background-color: var(--main-num-color);
 }
 #six {
-    background-color: var(--main-num-color);
+  background-color: var(--main-num-color);
 }
 #subtract {
-    background-color: var(--main-mat-color);
+  background-color: var(--main-mat-color);
 }
 #one {
-    background-color: var(--main-num-color);
+  background-color: var(--main-num-color);
 }
 #two {
-    background-color: var(--main-num-color);
+  background-color: var(--main-num-color);
 }
 #three {
-    background-color: var(--main-num-color);
+  background-color: var(--main-num-color);
 }
 #add {
-    background-color: var(--main-mat-color);
+  background-color: var(--main-mat-color);
 }
 #zero {
-    background-color: var(--main-num-color);
+  background-color: var(--main-num-color);
 }
 #decimal {
-    background-color: rgb(179, 190, 207);
+  background-color: rgb(179, 190, 207);
 }
 #equal {
-    border: 2px solid greenyellow;
-    background-color: grey;
-    grid-column: 3/5;
-    grid-row: 6/6;
+  background-color: rgb(80, 255, 147);
+  grid-column: 3/5;
+  grid-row: 6/6;
 }

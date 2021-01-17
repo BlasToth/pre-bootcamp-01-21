@@ -45,10 +45,10 @@ for (let i = 0; i < operations.length; i++) {
 
 function calculate() {
   let result;
-  if (!operator) alert("NO OPERATOR");
-  if (!num1) alert("NO NUM1");
-  if (!num2) alert("NO NUM2");
-  else if (operator === "÷") {
+  //   if (!operator) alert("NO OPERATOR");
+  //   if (!num1) alert("NO NUM1");
+  //   if (!num2) alert("NO NUM2");
+  if (operator === "÷") {
     result = num1 / num2;
   } else if (operator === "×") {
     result = num1 * num2;
@@ -56,8 +56,13 @@ function calculate() {
     result = num1 - num2;
   } else if (operator === "+") {
     result = +num1 + +num2;
-  } else alert("Unknown operator!");
-  display.innerText = result;
+  }
+  //   else alert("Unknown operator!");
+  if (!result) {
+    display.innerText;
+    console.log(result);
+  } else display.innerText = result;
+  return result;
 }
 
 // clear button
@@ -71,11 +76,13 @@ function clearing() {
 }
 
 // equal button
-equal.addEventListener("click", () => {
-  calculate();
-  num1 = "";
-  num2 = "";
-  operator = true;
+equal.addEventListener("click", (result) => {
+  if (!result.length) {
+    calculate();
+    num1 = "";
+    num2 = "";
+    operator = true;
+  } else return;
 });
 
 // decimal button
@@ -94,3 +101,5 @@ decimal.addEventListener("click", () => {
     console.log(num2);
   }
 });
+
+// TODO: add a delete button
