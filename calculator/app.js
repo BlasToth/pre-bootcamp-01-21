@@ -8,22 +8,21 @@ const decimal = document.querySelector('#decimal');
 
 let num1 = "";
 let num2 = "";
-let operator ;
-let equalIsPressed = false;
+let operator = "";
 
 // numbers 
 for (let i = 0; i < numbers.length; i++) {
     numbers[i].addEventListener('click',() => {
-        if (display.value === "0" || equalIsPressed === true){
-            equalIsPressed = false;
-            display.value = numbers[i].textContent;
+        if (display.innerText === "0" || operator === true){
+            operator = false;
+            display.innerText = numbers[i].textContent;
         } else if (operator) {
-            display.value += numbers[i].textContent;
+            display.innerText += numbers[i].textContent;
             num2 += numbers[i].textContent;
             console.log("num2: " + num2);
             return num2;
         } else {
-            display.value += numbers[i].textContent;
+            display.innerText += numbers[i].textContent;
             num1 += numbers[i].textContent;
             console.log("num1: " + num1);
             return num1;
@@ -38,7 +37,7 @@ for (let i = 0; i < operations.length; i++) {
         else {
             operator = operations[i].textContent;
             console.log("operator: " + operator);
-            display.value = "";
+            display.innerText = "";
             return operator;
         }
     });
@@ -58,17 +57,17 @@ function calculate() {
     } else if (operator === '+') {
         result = +num1 + +num2;
     } else alert('Unknown operator!');
-    display.value = result;    
+    display.innerText = result;    
 }
 
 // clear button
 clear.addEventListener('click', clearing);
 
 function clearing() {
-    display.value = "";
+    display.innerText = "";
     num1 = "";
     num2 = "";
-    operator = null;
+    operator = false;
 }
 
 // equal button
@@ -76,15 +75,24 @@ equal.addEventListener('click', () => {
     calculate();
     num1 = "";
     num2 = "";
-    operator = null;
-    equalIsPressed = true;
+    operator = true;
     
 });
 
 // decimal button
 decimal.addEventListener('click', ()=> {
-    if (display.value.includes('.')) return;
-    display.value += ".";
-    
+    if (display.innerText.includes('.')) {
+       return;
+    }
+        
+    display.innerText += ".";
+    if (!num1.includes('.')){
+        num1 += ".";
+    }
+    console.log(num1);
+    if (operator) {
+        num2 += "."; 
+        console.log(num2);
+    }  
 });
 
