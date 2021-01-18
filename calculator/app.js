@@ -1,5 +1,5 @@
 const display = document.querySelector("#display");
-
+const history = document.querySelector("#history");
 const numbers = document.querySelectorAll(".numbers");
 const operations = document.querySelectorAll(".operations");
 const clear = document.querySelector("#clear");
@@ -14,17 +14,30 @@ let operator = "";
 // numbers
 for (let i = 0; i < numbers.length; i++) {
   numbers[i].addEventListener("click", () => {
+    if (history.innerText.includes("=")) return;
     if (display.innerText === "0" || operator === true) {
       operator = false;
       display.innerText = numbers[i].textContent;
+      // history.innerText = numbers[i].textContent;
     } else if (operator) {
+      // operator should appear once
+      if (
+        !history.innerText.includes("÷") &&
+        !history.innerText.includes("×") &&
+        !history.innerText.includes("-") &&
+        !history.innerText.includes("+")
+      ) {
+        history.innerText += operator;
+      }
       display.innerText += numbers[i].textContent;
       num2 += numbers[i].textContent;
+      history.innerText += numbers[i].textContent;
       console.log("num2: " + num2);
       return num2;
     } else {
       display.innerText += numbers[i].textContent;
       num1 += numbers[i].textContent;
+      history.innerText += numbers[i].textContent;
       console.log("num1: " + num1);
       return num1;
     }
@@ -71,6 +84,7 @@ clear.addEventListener("click", clearing);
 
 function clearing() {
   display.innerText = "";
+  history.innerText = "";
   num1 = "";
   num2 = "";
   operator = false;
@@ -98,6 +112,9 @@ equal.addEventListener("click", (result) => {
     num1 = "";
     num2 = "";
     operator = true;
+    if (!history.innerText.includes("=")) {
+      history.innerText += "=";
+    }
   } else return;
 });
 
@@ -110,13 +127,15 @@ decimal.addEventListener("click", () => {
   display.innerText += ".";
   if (!num1.includes(".")) {
     num1 += ".";
+    history.innerText += ".";
   }
-  console.log(num1);
   if (operator) {
     num2 += ".";
+    history.innerText += ".";
+    
     console.log(num2);
   }
 });
 
-// TODO: add history to display
 // TODO: add space by every three digits
+// TODO: chain operations
