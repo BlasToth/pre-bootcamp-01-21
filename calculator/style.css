@@ -59,13 +59,17 @@ button:focus {
 .operations,
 #clear,
 #decimal,
-#equal {
+#equal,
+#deleteBtn {
   font-size: 2em;
   font-weight: bold;
 }
 #clear {
-  grid-column: 1/4;
+  grid-column: 1/3;
   grid-row: 2/2;
+  background-color: rgb(255, 34, 34);
+}
+#deleteBtn {
   background-color: rgb(255, 96, 34);
 }
 #division {

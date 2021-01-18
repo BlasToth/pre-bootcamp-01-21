@@ -5,6 +5,7 @@ const operations = document.querySelectorAll(".operations");
 const clear = document.querySelector("#clear");
 const equal = document.querySelector("#equal");
 const decimal = document.querySelector("#decimal");
+const deleteBtn = document.querySelector("#deleteBtn");
 
 let num1 = "";
 let num2 = "";
@@ -75,6 +76,21 @@ function clearing() {
   operator = false;
 }
 
+// delete button
+deleteBtn.addEventListener("click", () => {
+  const displayToSlice = display.innerText;
+  const sliced = displayToSlice.slice(0, -1);
+
+  if (operator) {
+    num2 = num2.slice(0, -1);
+    console.log(num2);
+  } else {
+    num1 = num1.slice(0, -1);
+    console.log(num1);
+  }
+  display.innerText = sliced;
+});
+
 // equal button
 equal.addEventListener("click", (result) => {
   if (!result.length) {
@@ -102,4 +118,5 @@ decimal.addEventListener("click", () => {
   }
 });
 
-// TODO: add a delete button
+// TODO: add history to display
+// TODO: add space by every three digits
