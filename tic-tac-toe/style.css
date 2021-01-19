@@ -1,0 +1,17 @@
+* {
+  box-sizing: border-box;
+}
+html, h1 {
+    display: flex;
+    justify-content: center;
+}
+#game-container {
+  display: grid;
+  grid-template-columns: repeat(3, 200px);
+  grid-template-rows: repeat(3, 200px);
+  
+}
+.cell {
+    border: 3px solid rgb(52, 201, 64);
+}
+
