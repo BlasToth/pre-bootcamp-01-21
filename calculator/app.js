@@ -10,6 +10,8 @@ const deleteBtn = document.querySelector("#deleteBtn");
 let num1 = "";
 let num2 = "";
 let operator = "";
+let result;
+let formattedResult;
 
 // numbers
 for (let i = 0; i < numbers.length; i++) {
@@ -58,7 +60,6 @@ for (let i = 0; i < operations.length; i++) {
 }
 
 function calculate() {
-  let result;
   //   if (!operator) alert("NO OPERATOR");
   //   if (!num1) alert("NO NUM1");
   //   if (!num2) alert("NO NUM2");
@@ -75,7 +76,9 @@ function calculate() {
   if (!result) {
     display.innerText;
     console.log(result);
-  } else display.innerText = result;
+  } else 
+  formattedResult = result.toString().replace(/(\d)(?=(\d{3})+$)/g, "$1 ");
+  display.innerText = formattedResult;
   return result;
 }
 
@@ -132,10 +135,9 @@ decimal.addEventListener("click", () => {
   if (operator) {
     num2 += ".";
     history.innerText += ".";
-    
+
     console.log(num2);
   }
 });
 
-// TODO: add space by every three digits
 // TODO: chain operations
