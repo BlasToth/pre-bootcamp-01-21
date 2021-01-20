@@ -10,7 +10,6 @@ let winner = false;
 let board = [ "", "", "", 
               "", "", "",
               "", "", "" ];
-              console.log(...board);
 
 // game
 for (let i = 0; i < 9; i++) {
@@ -21,7 +20,7 @@ for (let i = 0; i < 9; i++) {
         turn++;
         board[i] = player1;
         grid[i].innerText = player1;
-        grid[i].style.backgroundColor = "blue";
+        grid[i].style.backgroundColor = "#1D77A1";
         lastClickValue = grid[i].textContent;
         win();
       }
@@ -30,12 +29,12 @@ for (let i = 0; i < 9; i++) {
         turn++;
         board[i] = player2;
         grid[i].innerText = player2;
-        grid[i].style.backgroundColor = "red";
+        grid[i].style.backgroundColor = "#ED4521";
         lastClickValue = grid[i].textContent;
         win();
       }
       }
-    console.log(...board);
-    console.log(turn);
+    //console.log(...board);
+    //console.log(turn);
   });
 }

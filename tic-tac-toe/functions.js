@@ -9,7 +9,10 @@ function win() {
       (board[6] === player2 && board[7] === player2 && board[8] === player2)
       ) {
     handleWinner();
-    }
+    // grid[0].style.backgroundColor = "green";
+    // grid[1].style.backgroundColor = "green";
+    // grid[2].style.backgroundColor = "green";
+  }
 
     // vertical check
     if ( 
@@ -44,7 +47,7 @@ function endGame() {
     if (winner === true || turn ===9) {
       for (let i = 0; i < 9; i++) {
         grid[i].innerText = "";
-        grid[i].style.backgroundColor = "rgb(218, 184, 140)";
+        grid[i].style.backgroundColor = " #5AC8DB";
         board[i] = "";
         winner = false;
         turn = 0;

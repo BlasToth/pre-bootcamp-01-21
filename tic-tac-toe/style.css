@@ -1,20 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
+
 * {
   box-sizing: content-box;
+  font-family: 'Yusei Magic', sans-serif;
+
 }
-html,
 h1 {
+  text-align: center;
+  color: antiquewhite;
+  text-shadow: 1px 1px rgb(39, 35, 29);
+}
+html {
+  background-color: #231633;
+background-image: linear-gradient(315deg, #590f6b 0%, #763e83 74%);
+  height: 100vh;
   display: flex;
   justify-content: center;
 }
 #game-container {
   display: grid;
+  gap: 5px;
   grid-template-columns: repeat(3, 10em);
   grid-template-rows: repeat(3, 10em);
-  border: none;
 }
 .cell {
-  background-color: rgb(218, 184, 140);
+  background-color: #5AC8DB;
+  border: 3px solid rgb(248, 248, 248);
 }
 button {
-    font-size: 3em;
+    font-size: 4.5em;
+    font-weight: bold;
+    color: cornsilk;
+    border-radius: 10%;
+    transition: transform 200ms ease-in-out 15ms;
+    
 }
+button:focus {
+  outline:0;
+}
+button:hover { transform: scale(1.025); }
