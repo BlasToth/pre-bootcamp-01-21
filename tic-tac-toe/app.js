@@ -15,16 +15,20 @@ for (let i = 0; i < 9; i++) {
     turn++;
     // marking spaces and alternating "X" and "O"
     if (turn % 2 === 0) {
-      grid[i].innerText = player1;
-      grid[i].style.backgroundColor = "blue";
-      board[i] = player1;
-      win();
+      if (!board[i]) {
+        grid[i].innerText = player1;
+        grid[i].style.backgroundColor = "blue";
+        board[i] = player1;
+        win();
+      }
     } else {
-      grid[i].innerText = player2;
-      grid[i].style.backgroundColor = "red";
-      board[i] = player2;
-      win();
-    }
+      if (!board[i]) {
+        grid[i].innerText = player2;
+        grid[i].style.backgroundColor = "red";
+        board[i] = player2;
+        win();
+      }
+      }
     console.log(...board);
   });
 }
