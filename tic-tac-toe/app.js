@@ -16,16 +16,16 @@ for (let i = 0; i < 9; i++) {
     // marking spaces and alternating "X" and "O"
     if (turn % 2 === 0) {
       if (!board[i]) {
+        board[i] = player1;
         grid[i].innerText = player1;
         grid[i].style.backgroundColor = "blue";
-        board[i] = player1;
         win();
       }
     } else {
       if (!board[i]) {
+        board[i] = player2;
         grid[i].innerText = player2;
         grid[i].style.backgroundColor = "red";
-        board[i] = player2;
         win();
       }
       }

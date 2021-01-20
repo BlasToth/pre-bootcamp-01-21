@@ -2,7 +2,9 @@ function win() {
     // horizontal check
     if ( board[0] === player1 && board[1] === player1 && board[2] === player1 ) {
       winner = true;
-      alert("WINNER PLAYER1 - X");
+      setTimeout(()=> {
+          confirm("WINNER: PLAYER1 - X \n Do you want to play again?");
+      }, 300);
           setTimeout(()=> {
         endGame();
       }, 2000); 
@@ -10,7 +12,9 @@ function win() {
     }
     if ( board[0] === player2 && board[1] === player2 && board[2] === player2 ) {
       winner = true;
-      alert("WINNER PLAYER2 - O");
+      setTimeout(()=> {
+          confirm("WINNER: PLAYER2 - O \n Do you want to play again?");
+      }, 300);
           setTimeout(()=> {
         endGame();
       }, 2000); 
@@ -18,7 +22,9 @@ function win() {
     }
     if ( board[3] === player1 && board[4] === player1 && board[5] === player1 ) {
       winner = true;
-      alert("WINNER PLAYER1 - X");
+      setTimeout(()=> {
+          confirm("WINNER: PLAYER1 - X \n Do you want to play again?");
+      }, 300);
           setTimeout(()=> {
         endGame();
       }, 2000); 
@@ -26,7 +32,9 @@ function win() {
     }
     if ( board[3] === player2 && board[4] === player2 && board[5] === player2 ) {
       winner = true;
-      alert("WINNER PLAYER2 - O");
+      setTimeout(()=> {
+          confirm("WINNER: PLAYER2 - O \n Do you want to play again?");
+      }, 300);
           setTimeout(()=> {
         endGame();
       }, 2000); 
@@ -34,7 +42,9 @@ function win() {
     }
     if ( board[6] === player1 && board[7] === player1 && board[8] === player1 ) {
       winner = true;
-      alert("WINNER PLAYER1 - X");
+      setTimeout(()=> {
+          confirm("WINNER: PLAYER1 - X \n Do you want to play again?");
+      }, 300);
           setTimeout(()=> {
         endGame();
       }, 2000); 
@@ -42,7 +52,9 @@ function win() {
     }
     if ( board[6] === player2 && board[7] === player2 && board[8] === player2 ) {
       winner = true;
-      alert("WINNER PLAYER2 - O");
+      setTimeout(()=> {
+          confirm("WINNER: PLAYER2 - O \n Do you want to play again?");
+      }, 300);
           setTimeout(()=> {
         endGame();
       }, 2000); 
@@ -51,7 +63,9 @@ function win() {
     // vertical check
     if ( board[0] === player1 && board[3] === player1 && board[6] === player1 ) {
       winner = true;
-      alert("WINNER PLAYER1 - X");
+      setTimeout(()=> {
+          confirm("WINNER: PLAYER1 - X \n Do you want to play again?");
+      }, 300);
           setTimeout(()=> {
         endGame();
       }, 2000); 
@@ -59,7 +73,9 @@ function win() {
     }
     if ( board[0] === player2 && board[3] === player2 && board[6] === player2 ) {
       winner = true;
-      alert("WINNER PLAYER2 - O");
+      setTimeout(()=> {
+          confirm("WINNER: PLAYER2 - O \n Do you want to play again?");
+      }, 300);
           setTimeout(()=> {
         endGame();
       }, 2000); 
@@ -67,7 +83,9 @@ function win() {
     }
     if ( board[1] === player1 && board[4] === player1 && board[7] === player1 ) {
       winner = true;
-      alert("WINNER PLAYER1 - X");
+      setTimeout(()=> {
+          confirm("WINNER: PLAYER1 - X \n Do you want to play again?");
+      }, 300);
           setTimeout(()=> {
         endGame();
       }, 2000); 
@@ -75,7 +93,9 @@ function win() {
     }
     if ( board[1] === player2 && board[4] === player2 && board[7] === player2 ) {
       winner = true;
-      alert("WINNER PLAYER2 - O");
+      setTimeout(()=> {
+          confirm("WINNER: PLAYER2 - O \n Do you want to play again?");
+      }, 300);
           setTimeout(()=> {
         endGame();
       }, 2000); 
@@ -83,7 +103,9 @@ function win() {
     }
     if ( board[2] === player1 && board[5] === player1 && board[8] === player1 ) {
       winner = true;
-      alert("WINNER PLAYER1 - X");
+      setTimeout(()=> {
+          confirm("WINNER: PLAYER1 - X \n Do you want to play again?");
+      }, 300);
           setTimeout(()=> {
         endGame();
       }, 2000); 
@@ -91,7 +113,9 @@ function win() {
     }
     if ( board[2] === player2 && board[5] === player2 && board[8] === player2 ) {
       winner = true;
-      alert("WINNER PLAYER2 - O");
+      setTimeout(()=> {
+          confirm("WINNER: PLAYER2 - O \n Do you want to play again?");
+      }, 300);
           setTimeout(()=> {
         endGame();
       }, 2000); 
@@ -100,7 +124,9 @@ function win() {
     // diagonal check
     if ( board[0] === player1 && board[4] === player1 && board[8] === player1 ) {
       winner = true;
-      alert("WINNER PLAYER1 - X");
+      setTimeout(()=> {
+          confirm("WINNER: PLAYER1 - X \n Do you want to play again?");
+      }, 300);
           setTimeout(()=> {
         endGame();
       }, 2000); 
@@ -108,7 +134,9 @@ function win() {
     }
     if ( board[0] === player2 && board[4] === player2 && board[8] === player2 ) {
       winner = true;
-      alert("WINNER PLAYER2 - O");
+      setTimeout(()=> {
+          confirm("WINNER: PLAYER2 - O \n Do you want to play again?");
+      }, 300);
           setTimeout(()=> {
         endGame();
       }, 2000); 
@@ -116,7 +144,9 @@ function win() {
     }
     if ( board[2] === player1 && board[4] === player1 && board[6] === player1 ) {
       winner = true;
-      alert("WINNER PLAYER1 - X");
+      setTimeout(()=> {
+          confirm("WINNER: PLAYER1 - X \n Do you want to play again?");
+      }, 300);
           setTimeout(()=> {
         endGame();
       }, 2000); 
@@ -124,7 +154,9 @@ function win() {
     }
     if ( board[2] === player2 && board[4] === player2 && board[6] === player2 ) {
       winner = true;
-      alert("WINNER PLAYER2 - O");
+      setTimeout(()=> {
+          confirm("WINNER: PLAYER2 - O \n Do you want to play again?");
+      }, 300);
           setTimeout(()=> {
         endGame();
       }, 2000);   
