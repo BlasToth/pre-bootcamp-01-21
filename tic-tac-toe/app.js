@@ -12,10 +12,11 @@ let board = [ "", "", "",
 // game
 for (let i = 0; i < 9; i++) {
   grid[i].addEventListener("click", (e) => {
-    turn++;
     // marking spaces and alternating "X" and "O"
+    console.log(turn);
     if (turn % 2 === 0) {
       if (!board[i]) {
+        turn++;
         board[i] = player1;
         grid[i].innerText = player1;
         grid[i].style.backgroundColor = "blue";
@@ -23,6 +24,7 @@ for (let i = 0; i < 9; i++) {
       }
     } else {
       if (!board[i]) {
+        turn++;
         board[i] = player2;
         grid[i].innerText = player2;
         grid[i].style.backgroundColor = "red";
