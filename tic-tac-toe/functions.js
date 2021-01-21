@@ -51,6 +51,7 @@ function endGame() {
         board[i] = "";
         winner = false;
         turn = 0;
+        lastClickValue = "end";
       }
     }
   }
@@ -61,12 +62,12 @@ function endGame() {
     if (lastClickValue === "X") {
       setTimeout(()=> {
           confirm(player1WonMessage);
-      }, 300);
+      }, 30);
     }
     if (lastClickValue === "O") {
       setTimeout(()=> {
           confirm(player2WonMessage);
-      }, 300);
+      }, 30);
     }
         setTimeout(()=> {
       endGame();

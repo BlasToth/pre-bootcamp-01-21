@@ -22,6 +22,7 @@ for (let i = 0; i < 9; i++) {
         grid[i].innerText = player1;
         grid[i].style.backgroundColor = "#1D77A1";
         lastClickValue = grid[i].textContent;
+        if (winner === true) lastClickValue = "";
         win();
       }
     } else {
@@ -31,6 +32,7 @@ for (let i = 0; i < 9; i++) {
         grid[i].innerText = player2;
         grid[i].style.backgroundColor = "#ED4521";
         lastClickValue = grid[i].textContent;
+        if (winner === true) lastClickValue = "";
         win();
       }
       }
