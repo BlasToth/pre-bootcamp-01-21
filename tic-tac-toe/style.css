@@ -1,9 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap");
 
 * {
   box-sizing: content-box;
-  font-family: 'Yusei Magic', sans-serif;
-
+  font-family: "Yusei Magic", sans-serif;
 }
 h1 {
   text-align: center;
@@ -12,7 +11,7 @@ h1 {
 }
 html {
   background-color: #231633;
-background-image: linear-gradient(315deg, #590f6b 0%, #763e83 74%);
+  background-image: linear-gradient(315deg, #590f6b 0%, #763e83 74%);
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -24,18 +23,30 @@ background-image: linear-gradient(315deg, #590f6b 0%, #763e83 74%);
   grid-template-rows: repeat(3, 10em);
 }
 .cell {
-  background-color: #5AC8DB;
+  background-color: #5ac8db;
   border: 3px solid rgb(248, 248, 248);
 }
 button {
-    font-size: 4.5em;
-    font-weight: bold;
-    color: cornsilk;
-    border-radius: 10%;
-    transition: transform 200ms ease-in-out 15ms;
-    
+  font-size: 4.5em;
+  font-weight: bold;
+  color: cornsilk;
+  border-radius: 10%;
+  transition: transform 200ms ease-in-out 15ms;
 }
 button:focus {
-  outline:0;
+  outline: 0;
 }
-button:hover { transform: scale(1.025); }
+button:hover {
+  transform: scale(1.025);
+}
+#restart {
+  position: absolute;
+  top: 40px;
+  right: 100px;
+  width: 3.4em;
+  height: 1.8em;
+  background-color: rgb(255, 255, 255);
+  color: #590f6b;
+  font-size: 1.2em;
+  border: 3px solid #000000;
+}
