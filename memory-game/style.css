@@ -1,0 +1,22 @@
+* {
+  box-sizing: content-box;
+}
+html,
+h1 {
+  display: flex;
+  justify-content: center;
+}
+#game-container {
+  display: grid;
+  gap: 5px;
+  grid-template-columns: repeat(3, 10em);
+  grid-template-rows: repeat(3, 10em);
+  border: none;
+}
+.cell {
+  
+}
+button {
+    background-color: lightcoral;
+    border: 5px solid blueviolet;
+}
