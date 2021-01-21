@@ -9,14 +9,18 @@ h1 {
 #game-container {
   display: grid;
   gap: 5px;
-  grid-template-columns: repeat(3, 10em);
-  grid-template-rows: repeat(3, 10em);
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: repeat(3, 100px);
   border: none;
-}
-.cell {
-  
 }
 button {
     background-color: lightcoral;
     border: 5px solid blueviolet;
+}
+.class {
+  background-color: rgb(0, 60, 255);
+}
+.turned {
+  transition: 1s ease-out;
+  transform: rotateY(0.5turn);
 }
