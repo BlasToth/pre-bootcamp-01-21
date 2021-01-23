@@ -12,18 +12,6 @@ h1 {
   grid-template-columns: repeat(4, 100px);
   grid-template-rows: repeat(3, 100px);
 }
-button {
-    background-color: lightcoral;
-    border: none;
-}
-button:focus {
-  outline: 0;
-}
-.cell {
-  background-image: url(./images/blank.png);
-}
-.turned {
-  background-color: rgb(255, 255, 255);
-  transition: 1s ease-out;
-  transform: rotateY(0.5turn);
+img {
+  background-color: coral;
 }

@@ -1,79 +1,104 @@
-const images = document.querySelectorAll('.cell');
+const gameContainer = document.querySelector('#game-container');
 const background = [
     {
         name: "apple",
-        backgroundImg: "apple.png"
+        img: "images/apple.png"
     },
     {
         name: "apple",
-        backgroundImg: "apple.png"
+        img: "images/apple.png"
     },
     {
         name: "banana",
-        backgroundImg: "banana.png"
+        img: "images/banana.png"
     },
     {
         name: "banana",
-        backgroundImg: "banana.png"
+        img: "images/banana.png"
     },
     {
         name: "fig",
-        backgroundImg: "fig.png"
+        img: "images/fig.png"
     },
     {
         name: "fig",
-        backgroundImg: "fig.png"
+        img: "images/fig.png"
     },
     {
         name: "lemon",
-        backgroundImg: "lemon.png"
+        img: "images/lemon.png"
     },
     {
         name: "lemon",
-        backgroundImg: "lemon.png"
+        img: "images/lemon.png"
     },
     {
         name: "mango",
-        backgroundImg: "mango.png"
+        img: "images/mango.png"
     },
     {
         name: "mango",
-        backgroundImg: "mango.png"
+        img: "images/mango.png"
     },
     {
         name: "pear",
-        backgroundImg: "pear.png"
+        img: "images/pear.png"
     },
     {
         name: "pear",
-        backgroundImg: "pear.png"
+        img: "images/pear.png"
     }   
   ];
 
 randomArrayShuffle(background);
 
+var cardsClicked = [];
+var cardsClickedId = [];
+console.log(cardsClicked);
+var cardsWon = [];
 
-let clickedArray = [];
-let match = "";
+function createBoard() {
+    for (let i = 0; i < background.length; i++) {
+        var card = document.createElement('img');
+        card.setAttribute('src', 'images/blank.png');
+        card.setAttribute('data-id', i);
+        card.addEventListener('click', flipCard);
+        gameContainer.appendChild(card);
+    }
+}
 
+function checkForMatch() {
+    var cards = document.querySelectorAll('img');
+    const optionOneId = cardsClickedId[0];
+    const optionTwoId = cardsClickedId[1];
+    if (cardsClicked[0] === cardsClicked[1]) {
+        cards[optionOneId].setAttribute('src', 'images/white.png');
+        cards[optionTwoId].setAttribute('src', 'images/white.png');
+        cardsWon.push(cardsClicked);
+    } else {
+        cards[optionOneId].setAttribute('src', 'images/blank.png');
+        cards[optionTwoId].setAttribute('src', 'images/blank.png');
+    }
+    cardsClicked = [];
+    cardsClickedId = [];
+}
 
-for (let i = 0; i < images.length; i++) {
-    
-    images[i].addEventListener("click", ()=> {
-        images[i].style.backgroundImage = `url(images/${background[i].name}.png)`;
-        clickedArray.push(images[i].style.backgroundImage = `${background[i]}.png`);
-        console.log("Clicked: " + clickedArray);
-        if (clickedArray[0] === clickedArray[1]) {
-            match = clickedArray[0];
-            console.log("MATCHED: " + match);
-        }
-    
-    })
+createBoard();
+
+function flipCard() {
+    var cardId = this.getAttribute('data-id');
+    cardsClicked.push(background[cardId].name);
+    cardsClickedId.push(cardId);
+    this.setAttribute('src', background[cardId].img);
+    if (cardsClicked.length === 2) {
+        setTimeout(checkForMatch, 600);
+    }
 }
 
 
+
 function randomArrayShuffle(array) {
-    let currentIndex = array.length, temporaryValue, randomIndex;
+    var currentIndex = array.length, temporaryValue, randomIndex;
     while (0 !== currentIndex) {
       randomIndex = Math.floor(Math.random() * currentIndex);
       currentIndex -= 1;
