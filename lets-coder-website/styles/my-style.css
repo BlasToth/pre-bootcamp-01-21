@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@600&display=swap');
 
 html {
   scroll-behavior: smooth;
   text-align: center;
+  font-family: 'Catamaran', sans-serif;
 }
 body {
   margin: 0;
@@ -26,7 +28,7 @@ a {
 h2 {
   margin-top: 55px;
   color: aliceblue;
-  font-size: 2.5em;
+  font-size: 2.9em;
   text-shadow: 1px 1px 3px rgb(134, 119, 119);
 }
 #home {
@@ -39,7 +41,7 @@ hr {
   margin: 0 auto;
 }
 #wrapper-about-us {
-  background-color: yellow;
+  background-color: rgb(22, 153, 72);
   display: inline-block;
 }
 #contact {
@@ -52,7 +54,7 @@ hr {
   width: 300px;
   height: 300px;
   border: solid 15px rgb(255, 255, 255);
-  box-shadow: 0px 0px 20px 1px rgb(14, 15, 100);
+  box-shadow: 0px 0px 20px 1px rgb(7, 61, 19);
   border-radius: 50%;
 }
 .small-logo {
@@ -62,7 +64,11 @@ hr {
   width: 80%;
 }
 button {
-  margin-top: 15px;
+  background-color: darkblue;
+  color: bisque;
+  height: 3em;
+  width: 8em;
+  border-radius: 10px;
 }
 #about-us-text, #contact-text {
   max-width: 75%;
@@ -76,4 +82,48 @@ section > p	{
   margin-bottom: 20px;
   font-size: 1.2em;
 }
+.num {
+  font-size: 4em;
+  font-weight: bolder;
+}
+.inline-block {
+  display: inline-block;
+  text-align: justify;
+}
+.margin-right {
+  margin-right: 10px;
+}
+#container-div {
+  font-size: 1.4em;
+}
 
+@media only screen and (min-width: 600px) {
+  #us {
+    margin: 20px 100px;
+    display: flex;
+    justify-items: center;
+  }
+  section {
+    width: calc(100% / 3);
+  }
+  .image-about {
+    margin-top: 0 auto;
+    width: 200px;
+    height: 200px;
+    border: solid 10px rgb(255, 255, 255);
+    box-shadow: 0px 0px 20px 1px rgb(7, 61, 19);
+    border-radius: 50%;
+  }
+  h2 {
+    color: rgb(0, 0, 0);
+    font-size: 4em;
+    text-shadow: 1px 1px 3px rgb(134, 119, 119);
+  }
+  .small-logo {
+    margin: 50px;
+  }
+  .logo {
+    width: 80%;
+  }
+
+}
