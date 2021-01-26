@@ -47,7 +47,7 @@ hr {
 #contact {
   background-color: violet;
   display: inline-block;
-  height: 700px;
+  padding-bottom: 10px;
 }
 .image-about {
   margin-top: 20px;
@@ -96,6 +96,15 @@ section > p	{
 #container-div {
   font-size: 1.4em;
 }
+strong {
+  font-size: 1.2em;
+  text-decoration: underline;
+}
+footer {
+  background-color: rgb(243, 241, 241);
+  font-size: 2em;
+  padding: 25px;
+}
 
 @media only screen and (min-width: 600px) {
   #us {
@@ -116,7 +125,7 @@ section > p	{
   }
   h2 {
     color: rgb(0, 0, 0);
-    font-size: 4em;
+    font-size: 2em;
     text-shadow: 1px 1px 3px rgb(134, 119, 119);
   }
   .small-logo {
@@ -124,6 +133,19 @@ section > p	{
   }
   .logo {
     width: 80%;
+  }
+  #about-us-text, #contact-text {
+    max-width: 75%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    font-size: 1.7em;
+  }
+  .title {
+    font-size: 4em;
+  }
+  footer {
+    font-size: 2em;
+    padding: 45px;
   }
 
 }
