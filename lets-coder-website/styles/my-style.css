@@ -103,7 +103,12 @@ strong {
 footer {
   background-color: rgb(243, 241, 241);
   font-size: 2em;
-  padding: 25px;
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+footer a {
+  background-color: rgb(27, 96, 187);
+  padding: 2px;
 }
 
 @media only screen and (min-width: 600px) {
