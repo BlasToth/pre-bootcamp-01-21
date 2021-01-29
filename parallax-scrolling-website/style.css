@@ -1,3 +1,12 @@
+body::-webkit-scrollbar {
+    background-color: #46494d;
+    opacity: 0.3;
+    width: 7px;
+}
+body::-webkit-scrollbar-thumb {
+    background-color: #ddd;
+    border-radius: 15px;
+}
 body,
 html {
   height: 100%;
