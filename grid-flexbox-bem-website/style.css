@@ -9,23 +9,29 @@ body {
 
 header, 
 .main-content,
-.sidebar,
 footer {
     padding: 2em;
+    display: flex;
+}
+
+header {
+    justify-content: space-between;
+}
+footer {
+    justify-content: center;
 }
 
 header { background: #42D130; }
 .main-content { background: #3083d1; }
-.sidebar { background: #b130d1; }
 footer { background: #d1b930; }
 
 body {
     display: grid;
     grid-template-columns: 1.5em 1fr 1.5em;
+    grid-template-rows: 70px auto 70px;
     grid-template-areas: 
     "header header header"
     "...... main   ......"
-    "...... side   ......"
     "footer footer footer"
 }
 
@@ -35,7 +41,7 @@ body {
         grid-template-rows: 70px auto 70px;
         grid-template-areas: 
         "header header header header"
-        "...... main   side   ......"
+        "...... main   main   ......"
         "footer footer footer footer";
     }
 }
@@ -57,10 +63,17 @@ footer { grid-area: footer; }
 }
 
 .navigation-item {
-    margin: 0 10px;
+    margin: 0 20px;
 }
 
 .navigation-item a {
     text-decoration: none;
     color: #fff;
+}
+
+.navigation-logo {
+    width: 60px;
+    height: 60px;
+    opacity: 0.9;
+    margin-right: 50px;
 }
