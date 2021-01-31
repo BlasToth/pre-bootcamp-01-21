@@ -77,3 +77,80 @@ footer { grid-area: footer; }
     opacity: 0.9;
     margin-right: 50px;
 }
+
+/* index */
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.main-content__title {
+    color: cornsilk;
+    font-size: 3rem;
+    margin-top: 10px;
+}
+
+.card {
+    width: 60%;
+    max-width: 800px;
+    min-width: 400px;
+    display: grid;
+    grid-template-columns: repeat(4 1fr);
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "num day    desc  button"
+    "num month  place button";
+}
+
+.card__num { grid-area: num; }
+.card__day { grid-area: day; }
+.card__month { grid-area: month; }
+.card__desc { grid-area: desc; }
+.card__place { grid-area: place; }
+.card__button { grid-area: button; }
+
+
+.card__num {
+    font-size: 5rem;
+    font-weight: bolder;
+    grid-template-rows: 1/3;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .card__day {
+      display: flex;
+      align-items: flex-end;
+      font-size: 1.6rem;
+  }
+  .card__month {
+    display: flex;
+    align-items: flex-start;
+    font-size: 1.6rem;
+  }
+  .card__desc {
+    display: flex;
+    align-items: flex-end;
+    font-size: 1.6rem;
+  }
+  .card__place {
+    display: flex;
+    align-items: flex-start;
+    font-size: 1.6rem;
+  }
+ .card__button {
+    display: flex;
+    grid-template-rows: 1/3;
+    justify-content: center;
+    align-items: center;
+ }
+ .card__button button {
+    width: 90%;
+    padding: 5px 0;;
+    
+ }
+  strong {
+    text-decoration: underline;
+  }
