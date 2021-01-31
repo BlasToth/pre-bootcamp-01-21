@@ -179,22 +179,12 @@ strong {
 }
 
 /* Conócenos */
-.main-content--con {
+
+.about-us__section {
     display: flex;
     flex-direction: row;
-    width: 100%
-
-}
-.about-us__title--main {
-  border: 2px solid darksalmon;
 }
 
-.about-us__intro {
-    border: 2px solid greenyellow;
-}
-.about-us__card {
-    background-color: hotpink;
-}
 .about-us__image {
     width: 200px;
     height: 200px;
