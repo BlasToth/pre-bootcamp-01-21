@@ -3,154 +3,230 @@
 }
 
 body {
-    margin: 0 auto;
-    min-height: 100vh;
+  margin: 0 auto;
+  min-height: 100vh;
 }
 
-header, 
+header,
 .main-content,
 footer {
-    padding: 2em;
-    display: flex;
+  padding: 2em;
+  display: flex;
 }
 
 header {
-    justify-content: space-between;
+  justify-content: space-between;
 }
 footer {
-    justify-content: center;
+  justify-content: center;
 }
 
-header { background: #42D130; }
-.main-content { background: #3083d1; }
-footer { background: #d1b930; }
+header {
+  background: #42d130;
+}
+.main-content {
+  background: #3083d1;
+}
+footer {
+  background: #d1b930;
+}
 
 body {
-    display: grid;
-    grid-template-columns: 1.5em 1fr 1.5em;
-    grid-template-rows: 70px auto 70px;
-    grid-template-areas: 
+  display: grid;
+  grid-template-columns: 1.5em 1fr 1.5em;
+  grid-template-rows: 70px auto 70px;
+  grid-template-areas:
     "header header header"
     "...... main   ......"
-    "footer footer footer"
+    "footer footer footer";
 }
 
 @media only screen and (min-width: 860px) {
-    body {
-        grid-template-columns: 1fr minmax(400px, 650px) minmax(200px, 350px) 1fr;  
-        grid-template-rows: 70px auto 70px;
-        grid-template-areas: 
-        "header header header header"
-        "...... main   main   ......"
-        "footer footer footer footer";
-    }
+  body {
+    grid-template-columns: 1fr minmax(400px, 650px) minmax(200px, 350px) 1fr;
+    grid-template-rows: 70px auto 70px;
+    grid-template-areas:
+      "header header header header"
+      "...... main   main   ......"
+      "footer footer footer footer";
+  }
 }
 
-header { grid-area: header; }
-.main-content { grid-area: main; }
-.sidebar { grid-area: side; }
-footer { grid-area: footer; }
+header {
+  grid-area: header;
+}
+.main-content {
+  grid-area: main;
+}
+.sidebar {
+  grid-area: side;
+}
+footer {
+  grid-area: footer;
+}
 
 .navigation-list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
 .navigation-item {
-    margin: 0 20px;
+  margin: 0 20px;
 }
 
 .navigation-item a {
-    text-decoration: none;
-    color: #fff;
+  text-decoration: none;
+  color: #fff;
 }
 
 .navigation-logo {
-    width: 60px;
-    height: 60px;
-    opacity: 0.9;
-    margin-right: 50px;
+  width: 60px;
+  height: 60px;
+  opacity: 0.9;
+  margin-right: 50px;
 }
 
 /* index */
 
 .main-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .main-content__title {
-    color: cornsilk;
-    font-size: 3rem;
-    margin-top: 10px;
+  color: cornsilk;
+  font-size: 3rem;
+  margin-top: 10px;
 }
 
 .card {
-    width: 60%;
-    max-width: 800px;
-    min-width: 400px;
-    display: grid;
-    grid-template-columns: repeat(4 1fr);
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas: 
+  width: 60%;
+  max-width: 800px;
+  min-width: 400px;
+  display: grid;
+  grid-template-columns: repeat(4 1fr);
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
     "num day    desc  button"
     "num month  place button";
 }
 
-.card__num { grid-area: num; }
-.card__day { grid-area: day; }
-.card__month { grid-area: month; }
-.card__desc { grid-area: desc; }
-.card__place { grid-area: place; }
-.card__button { grid-area: button; }
-
+.card__num {
+  grid-area: num;
+}
+.card__day {
+  grid-area: day;
+}
+.card__month {
+  grid-area: month;
+}
+.card__desc {
+  grid-area: desc;
+}
+.card__place {
+  grid-area: place;
+}
+.card__button {
+  grid-area: button;
+}
 
 .card__num {
-    font-size: 5rem;
-    font-weight: bolder;
-    grid-template-rows: 1/3;
+  font-size: 5rem;
+  font-weight: bolder;
+  grid-template-rows: 1/3;
+  display: flex;
+  justify-content: flex-end;
+}
+.card__day {
+  display: flex;
+  align-items: flex-end;
+  font-size: 1.6rem;
+}
+.card__month {
+  display: flex;
+  align-items: flex-start;
+  font-size: 1.6rem;
+}
+.card__desc {
+  display: flex;
+  align-items: flex-end;
+  font-size: 1.6rem;
+}
+.card__place {
+  display: flex;
+  align-items: flex-start;
+  font-size: 1.6rem;
+}
+.card__button {
+  display: flex;
+  grid-template-rows: 1/3;
+  justify-content: center;
+  align-items: center;
+}
+.card__button button {
+  width: 90%;
+  padding: 5px 0;
+}
+strong {
+  text-decoration: underline;
+}
+
+/* Conócenos */
+.main-content--con {
     display: flex;
-    justify-content: flex-end;
-  }
-  .card__day {
-      display: flex;
-      align-items: flex-end;
-      font-size: 1.6rem;
-  }
-  .card__month {
-    display: flex;
-    align-items: flex-start;
-    font-size: 1.6rem;
-  }
-  .card__desc {
-    display: flex;
-    align-items: flex-end;
-    font-size: 1.6rem;
-  }
-  .card__place {
-    display: flex;
-    align-items: flex-start;
-    font-size: 1.6rem;
-  }
- .card__button {
-    display: flex;
-    grid-template-rows: 1/3;
-    justify-content: center;
-    align-items: center;
- }
- .card__button button {
-    width: 90%;
-    padding: 5px 0;;
-    
- }
-  strong {
-    text-decoration: underline;
-  }
+    flex-direction: row;
+    width: 100%
+
+}
+.about-us__title--main {
+  border: 2px solid darksalmon;
+}
+
+.about-us__intro {
+    border: 2px solid greenyellow;
+}
+.about-us__card {
+    background-color: hotpink;
+}
+.about-us__image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+/* Contacto */
+
+.contact {
+    background-color: indigo;
+    width: 80%;
+    min-width: 300px;
+}
+.contact__title {
+    font-size: 3rem;
+    text-align: center;
+    color: seashell;
+}
+.contact__text {
+    font-size: 1.4rem;
+    text-align: center;
+    margin: 10px 40px;
+}
+.contact__contact {
+    text-align: center;
+    font-size: 2em;
+    margin-top: 20px;
+    background-color: lemonchiffon;
+    padding: 40px;
+}
+.contact__contact a {
+    text-decoration: none;
+    color: rebeccapurple;
+    font-weight: bold;
+}
