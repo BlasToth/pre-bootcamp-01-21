@@ -185,21 +185,24 @@ strong {
 .about-us__text {
   text-align: center;
   width: 80%;
+  margin-bottom: 30px;
 }
 .about-us__sections {
-  border: 2px solid black;
   display: flex;
   flex-direction: row-reverse;
   width: 80%;
+  min-width: 600px;
 }
 .about-us__card {
-  border: 2px solid chartreuse;
   width: calc(100% / 3);
 }
 
 .section__image {
-  width: 200px;
-  height: 200px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 15px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
 }
 .section__title {
