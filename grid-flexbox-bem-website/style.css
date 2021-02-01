@@ -179,44 +179,62 @@ strong {
 }
 
 /* Conócenos */
-
-.about-us__section {
-    display: flex;
-    flex-direction: row;
+.about-us__title {
+  font-size: 3rem;
+}
+.about-us__text {
+  text-align: center;
+  width: 80%;
+}
+.about-us__sections {
+  border: 2px solid black;
+  display: flex;
+  flex-direction: row-reverse;
+  width: 80%;
+}
+.about-us__card {
+  border: 2px solid chartreuse;
+  width: calc(100% / 3);
 }
 
-.about-us__image {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
+.section__image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+.section__title {
+  text-align: center;
+}
+.section__paragraph {
+  text-align: center;
 }
 
 /* Contacto */
 
 .contact {
-    background-color: indigo;
-    width: 80%;
-    min-width: 300px;
+  background-color: indigo;
+  width: 80%;
+  min-width: 300px;
 }
 .contact__title {
-    font-size: 3rem;
-    text-align: center;
-    color: seashell;
+  font-size: 3rem;
+  text-align: center;
+  color: seashell;
 }
 .contact__text {
-    font-size: 1.4rem;
-    text-align: center;
-    margin: 10px 40px;
+  font-size: 1.4rem;
+  text-align: center;
+  margin: 10px 40px;
 }
 .contact__contact {
-    text-align: center;
-    font-size: 2em;
-    margin-top: 20px;
-    background-color: lemonchiffon;
-    padding: 40px;
+  text-align: center;
+  font-size: 2em;
+  margin-top: 20px;
+  background-color: lemonchiffon;
+  padding: 40px;
 }
 .contact__contact a {
-    text-decoration: none;
-    color: rebeccapurple;
-    font-weight: bold;
+  text-decoration: none;
+  color: rebeccapurple;
+  font-weight: bold;
 }
