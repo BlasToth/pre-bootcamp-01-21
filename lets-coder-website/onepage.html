@@ -191,19 +191,37 @@
           <td>Bilbao</td>
           <td>30</td>
           <td>cine</td>
-      </tr>
-      <tr>
-        <td>Miguel</td>
-        <td>Bilbao</td>
-        <td>30</td>
-        <td>cine</td>
-    </tr>
-    <tr>
-      <td>Miguel</td>
-      <td>Bilbao</td>
-      <td>30</td>
-      <td>cine</td>
-  </tr>
+        </tr>
+        <tr>
+          <td>Miguel</td>
+          <td>Bilbao</td>
+          <td>30</td>
+          <td>cine</td>
+        </tr>
+        <tr>
+          <td>Miguel</td>
+          <td>Bilbao</td>
+          <td>30</td>
+          <td>cine</td>
+        </tr>
+        <tr>
+          <td>Miguel</td>
+          <td>Bilbao</td>
+          <td>30</td>
+          <td>cine</td>
+        </tr>
+        <tr>
+          <td>Miguel</td>
+          <td>Bilbao</td>
+          <td>30</td>
+          <td>cine</td>
+        </tr>
+        <tr>
+          <td>Miguel</td>
+          <td>Bilbao</td>
+          <td>30</td>
+          <td>cine</td>
+        </tr>
       </tbody>
   </table>
   </div>
@@ -233,50 +251,68 @@
           <li> Inicio lista interior<li>
             <li> 07:00 Despertar </li>
           <li> Inicio lista interior<li>
-  </ul>
-  </div>
-<!--Inscripción-->
-<div id="registrate">
-  <form action="">
-  <h2 class="title">Información personal</h2>
-  <div class="personal-date">
-    <div>
-   <label for="nombre">Nombre</label>
-    <input type="text" id="nombre" required>
-   </div>
+          </ul>
+        </div>
+        <!--Inscripción-->
+        <div id="registrate">
+          <h2 class="title">Información personal</h2>
+          <form class="submission-form" action="">
+            <div class="personal-date">
+              <div class="first-name">
+                <label class="label-nombre" for="nombre">Nombre</label>
+                <input type="text" id="nombre" required>
+              </div>
+              
+              <div class="second-name">
+                <label class="label-apellidos" for="apellidos">Apellidos</label>
+                <input type="text" id="apellidos" required>
+              </div>
+            </div>
+            
+            <div class="personal-date2">
+              <div class="location">
+                <label for="poblacion">Población</label>
+                <input type="text" id="poblacion" required>
+        </div>
+        
+        <div class="postcode">
+          <label for="codigo">Código Postal</label>
+          <input type="number" id="codigo">
+        </div>
+        
+        <div class="country">
+          <label for="pais">País</label>
+          <input type="text" name="pais" id="pais">
+        </div>
+        
+      </div>
+      <div class="course-date">
+        <div class="radio">
+          <label class="radio-label" for="ft">Full Time</label>
+          <input type="radio" name="modul" id="ft">
+          <label class="radio-label" for="pt">Part Time</label>
+          <input type="radio" name="modul" id="pt">
+        </div>
+        <label for="modalidad">Modalidad</label> 
+        <select id="items">
+          <option value="item-1">Item 1</option>
+          <option value="item-2">Item 2</option>
+          <option value="item-3">Item 3</option>
+          <option value="item-4">Item 4</option>
+      </div>
+    </form>
+      
 
-   <div>
-   <label for="apellidos">Apellidos</label>
-    <input type="text" id="apellidos" required>
-  </div>
-  
-</div>
+      <div class="comments">
+        <textarea placeholder="Escríbenos..." ></textarea>
+      </div>
+      <input type="button" value="submit">
+      
+      
+      <h2 class="title">Información sobre el curso</h2>
 
-  <label for="poblacion">Población</label> <input type="text" id="poblacion" required>
-   
-   <label for="codigo">Código Postal</label><input type="number" id="codigo">
+    <h2 class="title">Comentarios</h2>
 
-   <label for="pais">País</label> <input type="text" name="pais" id="pais">
-  
-  <h2 class="title">Información sobre el curso</h2>
-  <div class="course-date">
-    <label for="ft">Full Time</label><input type="radio" name="modul" id="ft">
-    <label for="pt">Part Time</label><input type="radio" name="modul" id="pt">
-    <label for="modalidad">Modalidad</label> 
-    <select id="items">
-      <option value="item-1">Item 1</option>
-      <option value="item-2">Item 2</option>
-      <option value="item-3">Item 3</option>
-      <option value="item-4">Item 4</option>
-  </div>
-
-  <h2 class="title">Comentarios</h2>
-  <div class="comments">
-    <textarea rows="10" cols="100" placeholder="Escríbenos..." ></textarea>
-  </div>
-  <input type="button" value="submit">
-
-</form>
 
 </div>
 

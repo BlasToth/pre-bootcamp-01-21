@@ -208,13 +208,20 @@ th {
 }
 
 /* Registration */
-form {
+.submission-form {
+  max-width: 500px;
+  margin: 2rem auto;
+  border: 2px solid orangered;
+  padding: 2rem;
+}
+label {
+  display: flex;
+}
+input {
   width: 100%;
 }
-.personal-date {
-background-color: rgb(172, 140, 140);
-display: flex;
-justify-content: center;
-width: 100%;
+.radio-label,
+input[type="radio"] {
+  display: flex;
+  flex-direction: column;
 }
-
