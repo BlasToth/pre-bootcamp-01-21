@@ -59,6 +59,11 @@ hr {
   display: inline-block;
   background-color: aqua;
 }
+#registrate {
+  width: 100%;
+  display: inline-block;
+  background-color: rgb(211, 154, 90);
+}
 .image-about {
   margin-top: 20px;
   width: 300px;
