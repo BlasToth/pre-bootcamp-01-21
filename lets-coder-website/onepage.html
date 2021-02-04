@@ -239,11 +239,18 @@
 <div id="registrate">
   <form action="">
   <h2 class="title">Información personal</h2>
-  <div class="personal-dates">
-   <label for="nombre">Nombre</label> <input type="text" id="nombre" required>
-   
-   <label for="apellidos">Apellidos</label><input type="text" id="apellidos" required>
+  <div class="personal-date">
+    <div>
+   <label for="nombre">Nombre</label>
+    <input type="text" id="nombre" required>
+   </div>
+
+   <div>
+   <label for="apellidos">Apellidos</label>
+    <input type="text" id="apellidos" required>
   </div>
+  
+</div>
 
   <label for="poblacion">Población</label> <input type="text" id="poblacion" required>
    
@@ -252,13 +259,20 @@
    <label for="pais">País</label> <input type="text" name="pais" id="pais">
   
   <h2 class="title">Información sobre el curso</h2>
-  <div class="course-dates">
-
+  <div class="course-date">
+    <label for="ft">Full Time</label><input type="radio" name="modul" id="ft">
+    <label for="pt">Part Time</label><input type="radio" name="modul" id="pt">
+    <label for="modalidad">Modalidad</label> 
+    <select id="items">
+      <option value="item-1">Item 1</option>
+      <option value="item-2">Item 2</option>
+      <option value="item-3">Item 3</option>
+      <option value="item-4">Item 4</option>
   </div>
 
   <h2 class="title">Comentarios</h2>
   <div class="comments">
-
+    <textarea rows="10" cols="100" placeholder="Escríbenos..." ></textarea>
   </div>
   <input type="button" value="submit">
 

@@ -206,3 +206,15 @@ th {
 .ul-list {
   list-style-type: none;
 }
+
+/* Registration */
+form {
+  width: 100%;
+}
+.personal-date {
+background-color: rgb(172, 140, 140);
+display: flex;
+justify-content: center;
+width: 100%;
+}
+
