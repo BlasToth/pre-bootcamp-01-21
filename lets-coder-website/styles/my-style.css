@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@600&display=swap");
 
 html {
   scroll-behavior: smooth;
   text-align: center;
-  font-family: 'Catamaran', sans-serif;
+  font-family: "Catamaran", sans-serif;
 }
 body {
   margin: 0;
@@ -18,7 +18,7 @@ nav {
 }
 a {
   padding: 15px;
-  color:whitesmoke;
+  color: whitesmoke;
   background-color: black;
   display: inline-block;
   text-decoration: none;
@@ -49,6 +49,16 @@ hr {
   display: inline-block;
   padding-bottom: 10px;
 }
+#alumnos {
+  width: 100%;
+  background-color: rgb(0, 121, 111);
+  display: inline-block;
+}
+#list {
+  width: 100%;
+  display: inline-block;
+  background-color: aqua;
+}
 .image-about {
   margin-top: 20px;
   width: 300px;
@@ -70,13 +80,14 @@ button {
   width: 8em;
   border-radius: 10px;
 }
-#about-us-text, #contact-text {
+#about-us-text,
+#contact-text {
   max-width: 75%;
   margin: 0 auto;
   margin-bottom: 20px;
   font-size: 1.3em;
 }
-section > p	{
+section > p {
   max-width: 75%;
   margin: 0 auto;
   margin-bottom: 20px;
@@ -100,13 +111,14 @@ strong {
   font-size: 1.2em;
   text-decoration: underline;
 }
-footer {
+.contact-date {
   background-color: rgb(243, 241, 241);
   font-size: 2em;
   padding-top: 20px;
   padding-bottom: 40px;
+  padding: 45px;
 }
-footer a {
+.contact-date a {
   background-color: rgb(27, 96, 187);
   padding: 2px;
 }
@@ -139,7 +151,8 @@ footer a {
   .logo {
     width: 80%;
   }
-  #about-us-text, #contact-text {
+  #about-us-text,
+  #contact-text {
     max-width: 75%;
     margin: 0 auto;
     margin-bottom: 20px;
@@ -148,9 +161,43 @@ footer a {
   .title {
     font-size: 4em;
   }
-  footer {
-    font-size: 2em;
-    padding: 45px;
-  }
+}
 
+/* Table */
+
+/* 
+Tarea 3: añadir estilos a la tabla
+Las tablas son el elemento perfecto para ver un tipo de pseudoclases
+(https://devcode.la/tutoriales/pseudoclases-css-first-child-last-child-nth-child/)
+en CSS. Usadlas junto a los padding, border, text-align, font-size... para crear una tabla bien estilizada. Este link habla de otras propiedades de CSS para las tablas.
+https://www.w3schools.com/css/css_table.asp
+*/
+.alumnos {
+  border-collapse: collapse;
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+td,
+th {
+  border: 1px solid rgb(255, 255, 255);
+  padding: 8px;
+}
+.alumnos tr:nth-child(even) {
+  background-color: rgb(207, 207, 188);
+}
+.alumnos tr:hover {
+  background-color: indianred;
+}
+.alumnos th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align-last: left;
+  color: white;
+  background-color: #4caf50;
+}
+
+/* List */
+.ul-list {
+  list-style-type: none;
 }
