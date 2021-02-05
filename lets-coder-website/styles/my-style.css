@@ -225,3 +225,18 @@ input[type="radio"] {
   display: flex;
   flex-direction: column;
 }
+.modality {
+  display: flex;
+  flex-direction: column;
+}
+.textarea {
+  margin-top: 50px;
+}
+.section-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 10px solid firebrick;
+  margin: 0 auto;
+  margin-top: 50px;
+}
