@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic form HTML</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form action="there-is-no-backend" method="POST">
+        <ul>
+            <li>
+                <label class="required" for="name">Name:</label>
+                <input type="text" id="name" name="user_name" required>
+            </li>
+            <li>
+                <label class="required" for="email">E-mail:</label>
+                <input type="email" id="email" name="user_email" required>
+            </li>
+            <li>
+                <label for="msg">Message:</label>
+                <textarea name="msg" id="msg" name="user_message" placeholder="Write to us..."></textarea>
+            </li>
+            <li>
+                <button data-tooltip="Tooltip" class="button">Send</button>
+            </li>
+        </ul>
+    </form>
+    
+</body>
+</html>

@@ -1,0 +1,76 @@
+form {
+    margin: 0 auto;
+    border: 1.5px solid brown;
+    border-radius: 1rem;
+    width: 400px;
+    padding: 1rem;
+}
+/* element+element	-  div + p	
+Selects all <p> elements that are placed immediately after <div> elements */
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+form li + li {
+    margin-top: 1rem;
+}
+
+label {
+    display: inline-block;
+    width: 90px;
+    text-align: right;
+}
+
+input,
+textarea {
+    font: 1rem sans-serif;
+    width: 300px;
+    border: 1px solid olivedrab;
+    box-sizing: border-box;    
+}
+
+input:focus,
+textarea:focus {
+    border-color: orange;
+}
+
+textarea {
+    vertical-align: top;
+}
+
+button {
+    margin-left: 0.5rem;
+    background-color: seagreen;
+    font-weight: bold;
+    height: 40px;
+    width: 80px;
+    border: none;
+    border-radius: 5px;
+}
+
+/* https://www.youtube.com/watch?v=OtBpgtqrjyo
+    Learn CSS Pseudo Elements In 8 Minutes */
+
+.required::before {
+    content: '*';
+    color: red;
+}
+
+/* Add a tooltip */
+[data-tooltip] {
+    position: relative;
+}
+
+[data-tooltip]:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: 100%;
+    left: 10;
+    right: 10;
+    margin-top: 5px;
+    padding: 5px;
+    background-color: sandybrown;
+}
